@@ -3,14 +3,14 @@ import speech_recognition as sr
 import datetime
 import wikipedia 
 import webbrowser
+import myenv
 import os
-
 import openai
 
 
 
 def AI(prompt):
-    openai.api_key='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'
+    openai.api_key=myenv.api_key
     text=f'Openai Responsde to the prompt:{prompt}\n****************\n\n'
     
     response = openai.completions.create(
